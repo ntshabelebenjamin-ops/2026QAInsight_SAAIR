@@ -1,1 +1,16 @@
-
+StrategicObjective,KPI,Target,Actual,Unit,Status,ResponsibleOffice,ReportingPeriod
+Teaching and Learning,First-Year Pass Rate,85,82,Percent,Amber,Academic Affairs,Q2 2026
+Teaching and Learning,Programme Accreditation,100,100,Percent,Green,Quality Assurance,Q2 2026
+Teaching and Learning,Student Satisfaction,4.5,4.2,Rating,Amber,Quality Assurance,Q2 2026
+Research and Innovation,Research Publications,320,298,Publications,Amber,Research Office,Q2 2026
+Research and Innovation,Postgraduate Enrolment,2100,2075,Students,Amber,Academic Affairs,Q2 2026
+Research and Innovation,External Research Income,25000000,26700000,Rand,Green,Research Office,Q2 2026
+Student Success,Graduation Rate,78,75,Percent,Amber,Academic Affairs,Q2 2026
+Student Success,Retention Rate,90,91,Percent,Green,Student Affairs,Q2 2026
+Student Success,Graduate Employability,80,77,Percent,Amber,Career Services,Q2 2026
+Digital Transformation,LMS Availability,99.5,99.8,Percent,Green,ICT,Q2 2026
+Digital Transformation,Wi-Fi Coverage,95,91,Percent,Red,ICT,Q2 2026
+Digital Transformation,Online Module Readiness,100,94,Percent,Amber,Teaching & Learning Centre,Q2 2026
+Institutional Sustainability,Budget Utilisation,98,96,Percent,Green,Finance,Q2 2026
+Institutional Sustainability,Staff Development Participation,85,81,Percent,Amber,Human Resources,Q2 2026
+Institutional Sustainability,Infrastructure Projects Completed,12,9,Projects,Red,Facilities,Q2 2026
