@@ -1,8 +1,8 @@
 import streamlit as st
 
-# ----------------------------------------------------
+# --------------------------------------------------
 # PAGE CONFIGURATION
-# ----------------------------------------------------
+# --------------------------------------------------
 
 st.set_page_config(
     page_title="QAInsight AI",
@@ -11,9 +11,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ----------------------------------------------------
+# --------------------------------------------------
 # HEADER
-# ----------------------------------------------------
+# --------------------------------------------------
 
 st.title("🎓 QAInsight AI")
 
@@ -23,28 +23,26 @@ st.subheader(
 
 st.markdown("---")
 
-# ----------------------------------------------------
+# --------------------------------------------------
 # INTRODUCTION
-# ----------------------------------------------------
+# --------------------------------------------------
 
 st.markdown("""
 ## Welcome
 
 QAInsight AI is an Artificial Intelligence-powered Decision Support System
-developed to demonstrate how Strategic Data can strengthen
+designed for Institutional Planning, Institutional Research and
 Quality Assurance in Higher Education.
-
-This demonstration is inspired by the SAAIR 2026 Quality Forum.
 
 ---
 
-### What you can explore
+### Demonstration Dashboards
 
 📊 Executive Dashboard
 
-📚 Teaching & Learning Analytics
+📚 Teaching & Learning
 
-🎓 Student Success Analytics
+🎓 Student Success
 
 💬 Student Voice
 
@@ -52,33 +50,34 @@ This demonstration is inspired by the SAAIR 2026 Quality Forum.
 
 📈 Strategic KPIs
 
-🤖 AI Quality Insights
+🤖 AI Decision Support
 
 ---
 
-### Objectives
+### Purpose
 
-This platform demonstrates how Artificial Intelligence can help universities:
+This application demonstrates how strategic institutional data and AI can support:
 
-- Improve evidence-based decision making
-- Enhance programme quality
-- Monitor institutional performance
-- Analyse student feedback
-- Identify students at risk
-- Strengthen epistemic access
-- Support continuous quality improvement
+- Evidence-based decision making
+- Institutional Planning
+- Quality Assurance
+- Programme Review
+- Student Success
+- Continuous Improvement
 
 ---
 
-### Institution
+### About this Demonstration
 
-This application uses **simulated data** based on a South African
-Higher Education Institution for demonstration purposes only.
+This application uses **simulated institutional data**
+based on a South African university.
+
+It is designed for demonstration purposes only.
 """)
 
-# ----------------------------------------------------
+# --------------------------------------------------
 # SIDEBAR
-# ----------------------------------------------------
+# --------------------------------------------------
 
 st.sidebar.title("QAInsight AI")
 
@@ -86,12 +85,12 @@ st.sidebar.success(
     "Select a dashboard from the navigation menu."
 )
 
-# ----------------------------------------------------
+# --------------------------------------------------
 # FOOTER
-# ----------------------------------------------------
+# --------------------------------------------------
 
 st.markdown("---")
 
 st.caption(
-    "Developed for the SAAIR 2026 Quality Forum | Simulation Data Only"
+    "SAAIR 2026 | AI-powered Quality Assurance Decision Support System"
 )
