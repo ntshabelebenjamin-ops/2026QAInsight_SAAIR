@@ -1,1 +1,11 @@
-
+ResponseID,StudentID,School,ModuleCode,Satisfaction,FeedbackQuality,DigitalAccess,Belonging,OverallExperience,Comment
+1,SMU0001,School of Medicine,MED101,5,5,4,5,5,"Lecturers explain concepts clearly and provide timely feedback."
+2,SMU0002,School of Medicine,MED201,4,4,4,4,4,"Assessments were fair but feedback could be quicker."
+3,SMU0003,School of Pharmacy,PHA101,3,3,4,3,3,"Too many assessments in one week."
+4,SMU0004,School of Pharmacy,PHA302,2,2,3,2,2,"Assessment feedback takes too long."
+5,SMU0005,School of Health Care Sciences,HCS101,5,5,5,5,5,"Excellent support from lecturers and tutors."
+6,SMU0006,School of Health Care Sciences,HCS204,4,5,4,5,4,"The practical sessions were very useful."
+7,SMU0007,School of Science and Technology,SCI101,3,4,3,3,3,"Laboratory equipment needs improvement."
+8,SMU0008,School of Science and Technology,SCI205,2,3,2,2,2,"Internet connectivity affects online learning."
+9,SMU0009,School of Oral Health Sciences,DEN101,5,5,5,5,5,"Clinical training was excellent."
+10,SMU0010,School of Oral Health Sciences,DEN202,4,4,4,4,4,"Would appreciate more simulation equipment."
