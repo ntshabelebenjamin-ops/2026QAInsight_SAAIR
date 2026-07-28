@@ -1,1 +1,11 @@
-
+ComplaintID,Date,School,Category,Priority,Status,DaysOpen,ResponsibleOffice,Description
+C001,2026-01-15,School of Medicine,Assessment Feedback,High,Open,21,Academic Affairs,"Delayed assessment feedback."
+C002,2026-01-18,School of Pharmacy,LMS,Medium,Closed,4,ICT,"Unable to access online learning materials."
+C003,2026-01-22,School of Science and Technology,Laboratory,High,In Progress,15,Facilities,"Laboratory equipment not functioning."
+C004,2026-02-03,School of Health Care Sciences,Registration,Medium,Closed,2,Registrar,"Registration system unavailable."
+C005,2026-02-10,School of Oral Health Sciences,Clinical Placement,High,Open,12,Clinical Training,"Insufficient clinical placement opportunities."
+C006,2026-02-14,School of Medicine,Library,Low,Closed,1,Library,"Limited access to reference books."
+C007,2026-02-20,School of Pharmacy,Assessment Feedback,High,Open,18,Academic Affairs,"Marks not released on time."
+C008,2026-03-01,School of Science and Technology,Wi-Fi,Medium,In Progress,9,ICT,"Poor Wi-Fi coverage in lecture halls."
+C009,2026-03-05,School of Health Care Sciences,Timetable,Low,Closed,3,Faculty Office,"Timetable clashes."
+C010,2026-03-08,School of Oral Health Sciences,Facilities,Medium,Open,7,Facilities,"Simulation laboratory requires maintenance."
