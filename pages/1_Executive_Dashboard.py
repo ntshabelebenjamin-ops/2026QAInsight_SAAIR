@@ -18,7 +18,9 @@ st.caption("Simulated Institutional Data | SAAIR 2026 Demonstration")
 # Load Data
 # -----------------------------
 try:
-    df = pd.read_csv("data/students.csv")
+    from utils.data_loader import load_students
+
+df = load_students()
 except Exception as e:
     st.error(f"Unable to load students.csv\n\n{e}")
     st.stop()
