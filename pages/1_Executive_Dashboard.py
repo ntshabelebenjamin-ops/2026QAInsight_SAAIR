@@ -2,26 +2,30 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# -----------------------------------------------------
-# PAGE CONFIGURATION
-# -----------------------------------------------------
-
+# -----------------------------
+# Page Configuration
+# -----------------------------
 st.set_page_config(
     page_title="Executive Dashboard",
     page_icon="📊",
     layout="wide"
 )
 
-# -----------------------------------------------------
-# LOAD DATA
-# -----------------------------------------------------
+st.title("📊 Executive Quality Assurance Dashboard")
+st.caption("Simulated Institutional Data | SAAIR 2026 Demonstration")
 
-df = pd.read_csv("data/students.csv")
+# -----------------------------
+# Load Data
+# -----------------------------
+try:
+    df = pd.read_csv("data/students.csv")
+except Exception as e:
+    st.error(f"Unable to load students.csv\n\n{e}")
+    st.stop()
 
-# -----------------------------------------------------
-# CALCULATE KPIs
-# -----------------------------------------------------
-
+# -----------------------------
+# Calculate KPIs
+# -----------------------------
 total_students = len(df)
 
 pass_rate = round(
@@ -39,86 +43,36 @@ average_attendance = round(
     1
 )
 
-average_satisfaction = round(
-    df["Satisfaction"].mean(),
-    1
-)
-
-average_epistemic = round(
-    df["EpistemicAccess"].mean(),
-    1
-)
-
 high_risk = len(
     df[df["RiskLevel"] == "High"]
 )
 
-# -----------------------------------------------------
-# TITLE
-# -----------------------------------------------------
+# -----------------------------
+# KPI Cards
+# -----------------------------
+col1, col2, col3, col4 = st.columns(4)
 
-st.title("📊 Executive Quality Assurance Dashboard")
+col1.metric("Students", f"{total_students:,}")
 
-st.write(
-    "Institutional overview using simulated SMU data."
-)
+col2.metric("Pass Rate", f"{pass_rate}%")
 
-st.divider()
+col3.metric("Average Mark", f"{average_mark}%")
 
-# -----------------------------------------------------
-# KPI CARDS
-# -----------------------------------------------------
-
-col1, col2, col3 = st.columns(3)
-
-col1.metric(
-    "Students",
-    total_students
-)
-
-col2.metric(
-    "Pass Rate",
-    f"{pass_rate}%"
-)
-
-col3.metric(
-    "High Risk Students",
-    high_risk
-)
-
-col4, col5, col6 = st.columns(3)
-
-col4.metric(
-    "Average Mark",
-    f"{average_mark}%"
-)
-
-col5.metric(
-    "Attendance",
-    f"{average_attendance}%"
-)
-
-col6.metric(
-    "Epistemic Access",
-    f"{average_epistemic}/100"
-)
+col4.metric("High Risk Students", high_risk)
 
 st.divider()
 
-# -----------------------------------------------------
-# SCHOOL SUMMARY
-# -----------------------------------------------------
-
-st.subheader("School Performance")
+# -----------------------------
+# School Summary
+# -----------------------------
+st.subheader("Performance by School")
 
 school_summary = (
     df.groupby("School")
       .agg(
           Students=("StudentID", "count"),
           AverageMark=("AssessmentAverage", "mean"),
-          Attendance=("Attendance", "mean"),
-          Satisfaction=("Satisfaction", "mean"),
-          EpistemicAccess=("EpistemicAccess", "mean")
+          Attendance=("Attendance", "mean")
       )
       .round(1)
 )
@@ -128,105 +82,47 @@ st.dataframe(
     use_container_width=True
 )
 
-# -----------------------------------------------------
-# PASS RATE BY SCHOOL
-# -----------------------------------------------------
-
+# -----------------------------
+# Charts
+# -----------------------------
 st.subheader("Average Marks by School")
 
 fig = px.bar(
     school_summary.reset_index(),
     x="School",
     y="AverageMark",
-    text_auto=".1f",
-    title="Average Assessment Marks"
+    text_auto=".1f"
 )
 
-st.plotly_chart(
-    fig,
-    use_container_width=True
-)
+st.plotly_chart(fig, use_container_width=True)
 
-# -----------------------------------------------------
-# RISK DISTRIBUTION
-# -----------------------------------------------------
+st.subheader("Risk Distribution")
 
-st.subheader("Student Risk Distribution")
-
-risk = df["RiskLevel"].value_counts()
+risk = df["RiskLevel"].value_counts().reset_index()
+risk.columns = ["Risk Level", "Students"]
 
 fig2 = px.pie(
-    names=risk.index,
-    values=risk.values,
-    title="Risk Levels"
+    risk,
+    names="Risk Level",
+    values="Students"
 )
 
-st.plotly_chart(
-    fig2,
-    use_container_width=True
-)
+st.plotly_chart(fig2, use_container_width=True)
 
-# -----------------------------------------------------
-# STUDENT VOICE
-# -----------------------------------------------------
-
-st.subheader("Student Voice")
+# -----------------------------
+# Student Voice
+# -----------------------------
+st.subheader("Recent Student Comments")
 
 st.dataframe(
     df[
         [
             "StudentID",
             "School",
-            "Programme",
             "Comment"
         ]
-    ],
+    ].head(10),
     use_container_width=True
 )
 
-# -----------------------------------------------------
-# AI INSIGHTS
-# -----------------------------------------------------
-
-st.divider()
-
-st.subheader("AI Executive Insights")
-
-if st.button("Generate Insights"):
-
-    st.success("Analysis Complete")
-
-    st.markdown(f"""
-### Institutional Summary
-
-**Total Students:** {total_students}
-
-**Pass Rate:** {pass_rate}%
-
-**Average Assessment Mark:** {average_mark}%
-
-**Average Attendance:** {average_attendance}%
-
-**Average Satisfaction:** {average_satisfaction}/5
-
-**Epistemic Access Index:** {average_epistemic}/100
-
-**High Risk Students:** {high_risk}
-
----
-
-### Suggested Quality Enhancement Actions
-
-✅ Improve assessment turnaround.
-
-✅ Expand tutoring programmes.
-
-✅ Increase LMS engagement.
-
-✅ Monitor high-risk students weekly.
-
-✅ Use student voice to guide programme improvement.
-
-✅ Strengthen epistemic access initiatives.
-
-""")
+st.success("Executive Dashboard Loaded Successfully")
