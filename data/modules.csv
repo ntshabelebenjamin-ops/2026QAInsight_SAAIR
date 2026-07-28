@@ -1,1 +1,11 @@
-
+ModuleCode,ModuleName,School,Semester,StudentsEnrolled,PassRate,AverageMark,AssessmentTurnaroundDays,ModerationStatus
+MED101,Anatomy I,School of Medicine,1,220,84,68,10,Completed
+MED201,Physiology II,School of Medicine,2,180,78,64,12,Completed
+DEN101,Oral Biology,School of Oral Health Sciences,1,140,82,66,9,Completed
+DEN202,Prosthodontics II,School of Oral Health Sciences,2,110,76,61,14,Pending
+PHA101,Pharmacology I,School of Pharmacy,1,170,81,67,11,Completed
+PHA302,Clinical Pharmacy,School of Pharmacy,2,120,74,60,15,Pending
+HCS101,Nursing Fundamentals,School of Health Care Sciences,1,260,88,72,8,Completed
+HCS204,Community Health,School of Health Care Sciences,2,200,83,69,10,Completed
+SCI101,Biology I,School of Science and Technology,1,300,79,65,12,Completed
+SCI205,Biochemistry II,School of Science and Technology,2,190,75,62,13,Completed
