@@ -1,1 +1,11 @@
-
+StudentID,School,Programme,YearLevel,Gender,Age,Province,Funding,Attendance,LMSLogins,LibraryVisits,TutorSessions,AssessmentAverage,FeedbackDays,Satisfaction,RiskLevel,EpistemicAccess,Comment
+SMU0001,School of Medicine,MBChB,1,Female,19,Gauteng,NSFAS,94,125,21,8,83,7,5,Low,89,"Excellent lecturers and clinical support."
+SMU0002,School of Medicine,MBChB,2,Male,20,Limpopo,Bursary,82,98,18,5,74,12,4,Low,80,"Need faster assessment feedback."
+SMU0003,School of Medicine,MBChB,3,Female,22,North West,Self-funded,58,41,6,2,48,26,2,High,55,"Practical sessions are overcrowded."
+SMU0004,School of Pharmacy,BPharm,1,Male,18,Mpumalanga,NSFAS,91,118,19,7,81,8,5,Low,87,"Tutors explain concepts well."
+SMU0005,School of Pharmacy,BPharm,2,Female,20,Gauteng,NSFAS,67,59,12,4,56,20,3,Medium,67,"LMS is sometimes unavailable."
+SMU0006,School of Dentistry,BDS,1,Female,19,Limpopo,Bursary,93,122,22,8,86,6,5,Low,91,"Laboratories are excellent."
+SMU0007,School of Dentistry,BDS,2,Male,21,Free State,Self-funded,61,44,8,2,51,24,2,High,58,"Equipment shortages delay practical work."
+SMU0008,School of Health Care Sciences,BNursing,1,Female,18,Gauteng,NSFAS,88,104,17,6,76,10,4,Low,82,"Academic support is very helpful."
+SMU0009,School of Health Care Sciences,Radiography,2,Male,20,Eastern Cape,Bursary,72,73,14,4,64,16,3,Medium,71,"Need more clinical exposure."
+SMU0010,School of Science and Technology,BSc Life Sciences,1,Female,18,KwaZulu-Natal,NSFAS,89,109,20,6,79,9,4,Low,84,"Interactive teaching keeps me engaged."
