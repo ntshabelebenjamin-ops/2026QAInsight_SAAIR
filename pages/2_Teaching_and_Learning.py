@@ -10,7 +10,9 @@ st.caption("Module Performance | Assessment Quality | Academic Monitoring")
 # -------------------------
 # Load Data
 # -------------------------
-df = pd.read_csv("data/modules.csv")
+from utils.data_loader import load_modules
+
+df = load_modules()
 
 # -------------------------
 # KPI Cards
